@@ -26,7 +26,7 @@ test("setup checks part 1", async ({ page }) => {
   fs.writeFileSync('D:/a/BA-regressions-T15-main/BA-regressions-T15-main/datetime.json', jsonString);
 
   // INITIAL LOG IN
-  await page.goto('https://target110.brightarrow.com/r/');
+  await page.goto('https://target1111.brightarrow.com/r/');
   await page.getByLabel('Username').click();
   await page.getByLabel('Username').fill(`${username3}`);
   await page.getByLabel('Password').click();
@@ -218,7 +218,7 @@ test("setup checks part 1", async ({ page }) => {
 //this version has cb_lists for username4
 test("setup checks part 2", async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username4}`);
     await page.getByLabel('Password').click();
