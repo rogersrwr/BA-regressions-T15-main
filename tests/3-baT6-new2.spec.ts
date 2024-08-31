@@ -27,7 +27,7 @@ const app = new App({
 //const channelId = 'C06KJ8ML7PA';    //channelId for personal test server
 const channelId = 'C06LGR0MJRW';       //channelId for BA slack, automated_test_alerts channel
 
-const jsonData = require('D:/a/BA-regressions-T6/BA-regressions-T6/datetime.json');
+const jsonData = require('D:/a/BA-regressions-T15-main/BA-regressions-T15-main/datetime.json');
 
 test.beforeAll('', async ({ }) => {
 });
@@ -63,7 +63,7 @@ test.afterEach(async ({ page }, testInfo) => {
     console.log(`Did not run as expected, ended up at ${page.url()}`);
     jsonData.failures = true;
     const jsonString = JSON.stringify(jsonData, null, 2);
-    fs.writeFileSync('D:/a/BA-regressions-T6/BA-regressions-T6/datetime.json', jsonString);
+    fs.writeFileSync('D:/a/BA-regressions-T15-main/BA-regressions-T15-main/datetime.json', jsonString);
   }
   
 });
@@ -71,19 +71,19 @@ test.afterEach(async ({ page }, testInfo) => {
 
 test.afterAll(async ({  }) => {
   
-  if (jsonData.finished == true && jsonData.failures == false) {
-    await app.client.chat.postMessage({
-      token: process.env.O_AUTH,
-      channel: channelId,
-      text: `:white_check_mark: Tests ran successfully. Visit https://rogersrwr.github.io/BA-regressions-T6/ for full results.`,
-    });
-  } else if (jsonData.finished == true && jsonData.failures == true ) {
-    await app.client.chat.postMessage({
-      token: process.env.O_AUTH,
-      channel: channelId,
-      text: `:x: Test run has failed. Visit https://rogersrwr.github.io/BA-regressions-T6/ for full results.`,
-    });
-  }
+  // if (jsonData.finished == true && jsonData.failures == false) {
+  //   await app.client.chat.postMessage({
+  //     token: process.env.O_AUTH,
+  //     channel: channelId,
+  //     text: `:white_check_mark: Tests ran successfully. Visit https://rogersrwr.github.io/BA-regressions-T6/ for full results.`,
+  //   });
+  // } else if (jsonData.finished == true && jsonData.failures == true ) {
+  //   await app.client.chat.postMessage({
+  //     token: process.env.O_AUTH,
+  //     channel: channelId,
+  //     text: `:x: Test run has failed. Visit https://rogersrwr.github.io/BA-regressions-T6/ for full results.`,
+  //   });
+  // }
   
 });
 

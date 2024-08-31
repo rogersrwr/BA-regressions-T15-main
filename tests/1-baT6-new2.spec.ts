@@ -36,7 +36,7 @@ const app = new App({
 //const channelId = 'C06KJ8ML7PA';    //channelId for personal test server
 const channelId = 'C06LGR0MJRW';       //channelId for BA slack, automated_test_alerts channel
 
-const jsonData = require('D:/a/BA-regressions-T6/BA-regressions-T6/datetime.json');
+const jsonData = require('D:/a/BA-regressions-T15-main/BA-regressions-T15-main/datetime.json');
 
 test.beforeAll('', async ({ }) => {
 
@@ -45,21 +45,21 @@ test.beforeAll('', async ({ }) => {
   if (jsonData.started == false) {
 
 
-    const url = `${endp}`;
-    const data = {
-      action: 'addBV'
-    };
+    // const url = `${endp}`;
+    // const data = {
+    //   action: 'addBV'
+    // };
   
-    const headers = {
-      'Content-Type': 'application/json'
-    };
+    // const headers = {
+    //   'Content-Type': 'application/json'
+    // };
   
-    try {
-      const response = await axios.post(url, data, { headers });
-      console.log('Response data:', response.data);
-    } catch (error) {
-      console.error('Error sending POST request:', error);
-    }
+    // try {
+    //   const response = await axios.post(url, data, { headers });
+    //   console.log('Response data:', response.data);
+    // } catch (error) {
+    //   console.error('Error sending POST request:', error);
+    // }
     
     const currentDate = new Date();
 
@@ -90,7 +90,7 @@ test.beforeAll('', async ({ }) => {
     jsonData.failures = false;
     jsonData.finished = false;
     const jsonString = JSON.stringify(jsonData, null, 2);
-    fs.writeFileSync('D:/a/BA-regressions-T6/BA-regressions-T6/datetime.json', jsonString);
+    fs.writeFileSync('D:/a/BA-regressions-T15-main/BA-regressions-T15-main/datetime.json', jsonString);
 
     await app.start(process.env.PORT || 3000 );
     console.log(' app is running??');
@@ -355,7 +355,7 @@ test('#002: Setup for test #044, stop message hover icon test ', {
     { type: '', description: '● Extra slow connectivity to server or APIs.'},
   ],  
 }, async ({ page }) => {
-  /*
+  
   const x = jsonData.tHour;
   const y = jsonData.tMin;
   let w = jsonData.tDay;
@@ -371,7 +371,7 @@ test('#002: Setup for test #044, stop message hover icon test ', {
   await page.locator('div').filter({ hasText: /^Schedule Message$/ }).click();
   await page.getByLabel('Choose date, selected date is ').click();
 
-  if (w != 29) {
+  if (w != 31) {
     w += 2;
   }
 
@@ -487,7 +487,7 @@ test('#002: Setup for test #044, stop message hover icon test ', {
   //await page.goto('https://target110.brightarrow.com/r/home');
   await expect(page.getByText('Welcome, Ryan test')).toBeVisible({timeout: 20000 });
   await expect(page.getByText('test list 14 -- 1 contacts.')).toBeVisible();
-  */
+  
 });
 
 
