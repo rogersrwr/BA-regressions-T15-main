@@ -382,7 +382,7 @@ test("setup checks part 2", async ({ page }) => {
 
   const myElement6 = page.locator('.listOfListsRow > td').first();
   if (await myElement6.isVisible()) {
-    await page.locator('input[name="cb_lists2162281"]').check();
+    await page.locator('input[name="cb_lists2162271"]').check();
     await page.getByRole('button', { name: 'Select an Action' }).click();
     await page.getByRole('button', { name: 'Delete a list' }).click();
     const [request12] = await Promise.all([
