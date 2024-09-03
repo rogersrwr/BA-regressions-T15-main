@@ -175,7 +175,8 @@ test('#013: add list to favorites with menu, test list 2',{
   await page.getByLabel('Search').fill('test list 2');
   await page.getByLabel('Search').press('Enter');
   //await page.locator('input[name="cb_lists2162271"]').check();      //for username3
-  await page.locator('input[name="cb_lists2162281"]').check();
+  //await page.locator('input[name="cb_lists2162281"]').check();
+  await page.locator('input[name="cb_lists2162271"]').check();
   await page.getByRole('button', { name: 'Select an Action' }).click();
   //await page.getByRole('button', { name: 'Add list to favorites' }).click();
   const [request] = await Promise.all([

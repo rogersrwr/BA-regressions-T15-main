@@ -128,7 +128,7 @@ test.afterEach(async ({ page }, testInfo) => {
     console.log(`Did not run as expected, ended up at ${page.url()}`);
     jsonData.failures = true;
     const jsonString = JSON.stringify(jsonData, null, 2);
-    fs.writeFileSync('D:/a/BA-regressions-T6/BA-regressions-T6/datetime.json', jsonString);
+    fs.writeFileSync('D:/a/BA-regressions-T15-main/BA-regressions-T15-main/datetime.json', jsonString);
   }
   
 });
