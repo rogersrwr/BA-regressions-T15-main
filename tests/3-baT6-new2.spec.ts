@@ -113,7 +113,7 @@ test('#056: Removing list from favorites folder with heart icon',{
       page.getByRole('button', { name: 'Sign in' }).click()
     ]);
   
-    await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+    await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
     await expect(page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByText('Hi, I\'m the new BrightArrow')).toBeVisible();
     await page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByRole('button', { name: 'Close' }).click();  
   });
@@ -154,7 +154,7 @@ test('#057: Removing list from favorites folder with menu',{
       page.getByRole('button', { name: 'Sign in' }).click()
     ]);
   
-    await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+    await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
     await expect(page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByText('Hi, I\'m the new BrightArrow')).toBeVisible();
     await page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByRole('button', { name: 'Close' }).click();  
   });
@@ -198,7 +198,7 @@ test('#058: Remove email from Do Not Contact list/time',{
       page.getByRole('button', { name: 'Sign in' }).click()
     ]);
   
-    await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+    await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
     await expect(page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByText('Hi, I\'m the new BrightArrow')).toBeVisible();
     await page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByRole('button', { name: 'Close' }).click();  
   });
@@ -236,7 +236,7 @@ test('#059: Delete folder, auto folder',{
       page.getByRole('button', { name: 'Sign in' }).click()
     ]);
   
-    await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+    await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
     await expect(page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByText('Hi, I\'m the new BrightArrow')).toBeVisible();
     await page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByRole('button', { name: 'Close' }).click();  
   });
@@ -244,7 +244,7 @@ test('#059: Delete folder, auto folder',{
   await page.getByRole('button', { name: 'auto folder' }).click();
   await page.getByRole('link', { name: 'Delete Folder' }).click();
   await page.getByRole('button', { name: 'OK' }).click();
-  await expect(page.getByRole('button', { name: 'ryan test' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'ryantest7' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'auto list 3' })).toBeVisible();
   await expect(page.getByRole('link', { name: 'test list 1', exact: true })).toBeVisible();
 });
@@ -274,7 +274,7 @@ test('#060: Delete list, auto list 1',{
       page.getByRole('button', { name: 'Sign in' }).click()
     ]);
   
-    await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+    await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
     await expect(page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByText('Hi, I\'m the new BrightArrow')).toBeVisible();
     await page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByRole('button', { name: 'Close' }).click();  
   });
@@ -282,7 +282,7 @@ test('#060: Delete list, auto list 1',{
   await page.getByLabel('Search').click();
   await page.getByLabel('Search').fill('auto list 1');
   await page.getByLabel('Search').press('Enter');
-  await page.locator('input[name="cb_lists2162271"]').check();
+  await page.locator('input[name="cb_lists2692335"]').check();
   await page.getByRole('button', { name: 'Select an Action' }).click();
   await page.getByRole('button', { name: 'Delete a list' }).click();
   //await page.getByRole('button', { name: 'OK' }).click();
@@ -317,16 +317,16 @@ test('#061: Delete list, auto list 2',{
       page.getByRole('button', { name: 'Sign in' }).click()
     ]);
   
-    await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+    await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
     await expect(page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByText('Hi, I\'m the new BrightArrow')).toBeVisible();
     await page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByRole('button', { name: 'Close' }).click();  
   });
   await page.locator('div').filter({ hasText: /^My Lists$/ }).click();
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await page.getByLabel('Search').click();
   await page.getByLabel('Search').fill('auto list 2');
   await page.locator('#searchBarBtn').click();
-  await page.locator('input[name="cb_lists2162271"]').check();
+  await page.locator('input[name="cb_lists2692335"]').check();
   await page.getByRole('button', { name: 'Select an Action' }).click();
   await page.getByRole('button', { name: 'Delete a list' }).click();
   //await page.getByRole('button', { name: 'OK' }).click();
@@ -364,16 +364,16 @@ test('#062: Delete list 3, auto list import',{
       page.getByRole('button', { name: 'Sign in' }).click()
     ]);
   
-    await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+    await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
     await expect(page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByText('Hi, I\'m the new BrightArrow')).toBeVisible();
     await page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByRole('button', { name: 'Close' }).click();  
   });
   await page.locator('div').filter({ hasText: /^My Lists$/ }).click();
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await page.getByLabel('Search').click();
   await page.getByLabel('Search').fill('auto list 3');
   await page.getByLabel('Search').press('Enter');
-  await page.locator('input[name="cb_lists2162271"]').check();
+  await page.locator('input[name="cb_lists2692335"]').check();
   await page.getByRole('button', { name: 'Select an Action' }).click();
   await page.getByRole('button', { name: 'Delete a list' }).click();
   //await page.getByRole('button', { name: 'OK' }).click();
