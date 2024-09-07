@@ -90,7 +90,7 @@ test('#012: add list to favorites with heart icon, test list 1',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username4}`);
     await page.getByLabel('Password').click();
@@ -153,7 +153,7 @@ test('#013: add list to favorites with menu, test list 2',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username4}`);
     await page.getByLabel('Password').click();
@@ -223,7 +223,7 @@ test('#014: Copy list feature from menu (My Lists page)',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username4}`);
     await page.getByLabel('Password').click();
@@ -267,7 +267,7 @@ test('#015: Edit a message, make a change and then try backing out of page. Sele
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -317,7 +317,7 @@ test('#016: Save message button on Create Message page',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -387,7 +387,7 @@ test('#018: Changing contact email from pen icon in List Details page',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -438,7 +438,7 @@ test('#019: Disabling a contact', {
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -494,7 +494,7 @@ test('#020: Testing "Hide Disabled Contacts" checkbox within List Details page.'
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -542,7 +542,7 @@ test('#021: Create Message button from List Details page and send text message',
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -588,7 +588,7 @@ test('#022: Edit message, email only, and save.',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -644,7 +644,7 @@ test('#023: Send Message button from List Details page',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -694,7 +694,7 @@ test('#024: Send Message hover icon from My Lists page',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -736,7 +736,7 @@ test('#025: Do not contact list/time feature from menu',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -788,7 +788,7 @@ test('#026: Active BrightChats feature from main menu',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -827,7 +827,7 @@ test('#027: Start BrightChat button from List Details page',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -861,7 +861,7 @@ test('#028: Interacting from Active BrightChats page on computer',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();

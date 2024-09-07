@@ -71,19 +71,19 @@ test.afterEach(async ({ page }, testInfo) => {
 
 test.afterAll(async ({  }) => {
   
-  if (jsonData.finished == true && jsonData.failures == false) {
-    await app.client.chat.postMessage({
-      token: process.env.O_AUTH,
-      channel: channelId,
-      text: `:white_check_mark: Tests ran for T15 successfully. Visit https://rogersrwr.github.io/BA-regressions-T6/ for full results.`,
-    });
-  } else if (jsonData.finished == true && jsonData.failures == true ) {
-    await app.client.chat.postMessage({
-      token: process.env.O_AUTH,
-      channel: channelId,
-      text: `:x: Test run for T15 has failed. Visit https://rogersrwr.github.io/BA-regressions-T6/ for full results.`,
-    });
-  }
+  // if (jsonData.finished == true && jsonData.failures == false) {
+  //   await app.client.chat.postMessage({
+  //     token: process.env.O_AUTH,
+  //     channel: channelId,
+  //     text: `:white_check_mark: Tests ran for T15 successfully. Visit https://rogersrwr.github.io/BA-regressions-T6/ for full results.`,
+  //   });
+  // } else if (jsonData.finished == true && jsonData.failures == true ) {
+  //   await app.client.chat.postMessage({
+  //     token: process.env.O_AUTH,
+  //     channel: channelId,
+  //     text: `:x: Test run for T15 has failed. Visit https://rogersrwr.github.io/BA-regressions-T6/ for full results.`,
+  //   });
+  // }
   
 });
 
@@ -102,7 +102,7 @@ test('#056: Removing list from favorites folder with heart icon',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username4}`);
     await page.getByLabel('Password').click();
@@ -143,7 +143,7 @@ test('#057: Removing list from favorites folder with menu',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username4}`);
     await page.getByLabel('Password').click();
@@ -187,7 +187,7 @@ test('#058: Remove email from Do Not Contact list/time',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -225,7 +225,7 @@ test('#059: Delete folder, auto folder',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -263,7 +263,7 @@ test('#060: Delete list, auto list 1',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -306,7 +306,7 @@ test('#061: Delete list, auto list 2',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -353,7 +353,7 @@ test('#062: Delete list 3, auto list import',{
   ],
 }, async ({ page }) => {
   await test.step('Login', async () => {
-    await page.goto('https://target110.brightarrow.com/r/');
+    await page.goto('https://target1111.brightarrow.com/r/');
     await page.getByLabel('Username').click();
     await page.getByLabel('Username').fill(`${username3}`);
     await page.getByLabel('Password').click();
@@ -399,7 +399,7 @@ test('#063: ParentHub message received confirmation',{
     { type: '', description: '● Unexpected interactions with the ParentHub interface.'},
   ],
 }, async ({ page }) => {
-  await page.goto('https://target110.brightarrow.com/m/');
+  await page.goto('https://target1111.brightarrow.com/m/');
   await page.getByRole('button', { name: 'Parent / Student Login' }).click();
   await page.getByLabel('Enter your phone number').click();
   await page.getByLabel('Enter your phone number').fill(`${phone}`);
