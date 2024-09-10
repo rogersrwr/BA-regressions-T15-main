@@ -114,7 +114,7 @@ test.beforeEach('', async ({ page }) => {
     page.getByRole('button', { name: 'Sign in' }).click()
   ]);
 
-  await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+  await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
   await expect(page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByText('Hi, I\'m the new BrightArrow')).toBeVisible();
   await page.frameLocator('iframe[title="Help Scout Beacon - Messages and Notifications"]').getByRole('button', { name: 'Close' }).click();  
 });
@@ -361,7 +361,7 @@ test('#002: Setup for test #044, stop message hover icon test ', {
   let w = jsonData.tDay;
 
   await page.locator('div').filter({ hasText: /^My Lists$/ }).click();
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await page.getByRole('link', { name: 'test list 14' }).click();
   await page.locator('div').filter({ hasText: 'Edit Message' }).nth(3).click();
   await page.getByRole('tab', { name: 'Email' }).click();
@@ -485,7 +485,7 @@ test('#002: Setup for test #044, stop message hover icon test ', {
   await page.getByRole('button', { name: 'Schedule' }).click();
   await page.getByRole('button', { name: 'OK' }).click();
   //await page.goto('https://target110.brightarrow.com/r/home');
-  await expect(page.getByText('Welcome, Ryan test')).toBeVisible({timeout: 20000 });
+  await expect(page.getByText('Welcome, Ryantest7')).toBeVisible({timeout: 20000 });
   await expect(page.getByText('test list 14 -- 1 contacts.')).toBeVisible();
   
 });
@@ -689,7 +689,7 @@ test('#004: Make list from Create List button', {
     //Hits back button to access home page
     page.getByTestId('FastRewindIcon').click()
   ]);
-  await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+  await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
   //Failure here means screenshot comparison of BrightArrow Central failed. 
   //await expect(page).toHaveScreenshot("001-homePage-asExpected-check.png", { fullPage: true, maxDiffPixels: 100, mask: [page.getByRole('img')], });
 
@@ -737,7 +737,7 @@ test('#005: Create list from my lists page, auto list 2', {
     page.getByTestId('FastRewindIcon').click()
   ]);
 
-  await expect(page.getByText('Welcome, Ryan test')).toBeVisible();
+  await expect(page.getByText('Welcome, Ryantest7')).toBeVisible();
   //Failure here means screenshot comparison of BrightArrow Central failed. 
   //await expect(page).toHaveScreenshot("002-homePage-asExpected-check.png", { fullPage: true, maxDiffPixels: 100, mask: [page.getByRole('img')], });
 
@@ -760,7 +760,7 @@ test('#006: Create a folder', {
   ],
 }, async ({ page }) => {
   await page.locator('div').filter({ hasText: /^My Lists$/ }).click();
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await page.getByRole('button', { name: 'Select an Action' }).click();
   await page.getByRole('button', { name: 'Create a folder' }).click();
   await page.getByLabel('Folder Name').fill('auto folder');
@@ -783,7 +783,7 @@ test('#006: Create a folder', {
     mask: [page.locator('.listOfListsRow > td.listsTableColumns.advanced')],
   });
 
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await expect(page.getByRole('link', { name: 'test list 1', exact: true })).toBeVisible();
 });
 
@@ -803,7 +803,7 @@ test('#007: Create list in new folder', {
   ],
 }, async ({ page }) => {
   await page.locator('div').filter({ hasText: /^My Lists$/ }).click();
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await page.getByRole('button', { name: 'auto folder' }).click();
   await page.getByRole('button', { name: 'Select an Action' }).click();
   await page.getByRole('button', { name: 'Create a list' }).click();
@@ -823,7 +823,7 @@ test('#007: Create list in new folder', {
     mask: [page.locator('.listOfListsRow > td.listsTableColumns.advanced')],
   });
 
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await expect(page.getByRole('link', { name: 'auto list 3' })).toBeVisible();
 
   // await expect(page).toHaveScreenshot("004-visibleInMainFolder-check.png", {
@@ -848,7 +848,7 @@ test('#008: add contact to list, auto list 1', {
   ],
 }, async ({ page }) => {
   await page.locator('div').filter({ hasText: /^My Lists$/ }).click();
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await page.getByRole('link', { name: 'auto list 1' }).click();
   await page.getByRole('button', { name: 'Add Contact' }).click();
 
@@ -919,7 +919,7 @@ test('#009: Access list from pen icon to make another contact, auto list 1', {
   ],
 }, async ({ page }) => {
   await page.locator('div').filter({ hasText: /^My Lists$/ }).click();
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await page.getByLabel('Search').fill('auto list 1');
   await page.getByLabel('Search').press('Enter');
   await page.getByRole('link', { name: 'auto list 1' }).hover();
@@ -993,7 +993,7 @@ test('#010: Delete contact with trash icon on List Details page',{
   ],
 }, async ({ page }) => {
   await page.locator('div').filter({ hasText: /^My Lists$/ }).click();
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await page.getByRole('link', { name: 'auto list 1' }).click();
   await page.locator('td:nth-child(3) > button').first().click();
 
@@ -1033,7 +1033,7 @@ test('#011: Click on gear icon, test list 2',{
   ],
 }, async ({ page }) => {
   await page.locator('div').filter({ hasText: /^My Lists$/ }).click();
-  await page.getByRole('button', { name: 'ryan test' }).click();
+  await page.getByRole('button', { name: 'ryantest7' }).click();
   await page.getByLabel('Search').fill('test list 2');
   await page.getByLabel('Search').press('Enter');
   await page.getByRole('link', { name: 'test list 2' }).hover();
